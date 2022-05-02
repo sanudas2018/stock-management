@@ -1,0 +1,18 @@
+.blog-content{
+   background-color: rgba(240, 248, 255, 0.53);
+}
+.question-section{
+   margin-bottom: 20px;
+}
+.button-style {
+   background-color: #FF297D;
+   border-color: #FF297D;
+   color: white;
+   font-weight: bold;
+ }
+
+ .auth-img{
+    width: 60%;
+    height: 200px;
+ }
+ 

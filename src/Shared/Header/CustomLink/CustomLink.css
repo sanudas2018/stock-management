@@ -1,0 +1,19 @@
+.btn-menu{
+   text-decoration: none;
+   padding: 10px;
+   color: white;
+   font-weight: bold;
+}
+.btn-menu:hover{
+   background-color: rgb(230, 37, 140);
+   padding: 10px;
+   border-radius: 5px;
+   color: white;
+
+
+}
+
+.btn-space{
+   margin-right: 10px;
+   padding: 5px;
+}
