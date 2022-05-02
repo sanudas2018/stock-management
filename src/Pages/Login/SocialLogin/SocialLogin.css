@@ -1,0 +1,77 @@
+.or-main{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.or-left{
+   width: 150px;
+   height: 2px;
+   background-color: rgb(246, 11, 132);
+}
+
+.or-right{
+   width: 150px;
+   height: 2px;
+   background-color: rgb(246, 11, 132);
+}
+.textStyle{
+   background-color: white;
+   padding: 0px 5px 0px 5px;
+   border: 100%;
+   font-weight: bold;
+}
+.button-color{
+   background-color: #3982E4;
+}
+.google-btn,
+.GitHub-btn,
+.Facebook-btn{
+   font-weight: bold;
+   color: #000;
+   background-color: #fff;
+   border: none;
+   border-radius: 45px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease 0s;
+   cursor: pointer;
+   outline: none;
+      
+}
+.google-btn:hover {
+   background-color: #d2ed3b;
+   box-shadow: 0px 15px 20px rgba(250, 53, 9, 0.585);
+   color: white;
+   transform: translateY(-7px);
+   transition: 0.5s linear;
+ }
+ .GitHub-btn:hover{
+   background-color: #011c1f;
+   box-shadow: 0px 15px 20px rgba(12, 12, 12, 0.451);
+   color: white;
+   transform: translateY(-7px);
+   transition: 0.5s linear;
+ }
+ .Facebook-btn:hover{
+   background-color: #3982E4;
+   box-shadow: 0px 15px 20px rgba(6, 62, 100, 0.618);
+   color: white;
+   transform: translateY(-7px);
+   transition: 0.5s linear;
+ }
+ .googlelog{
+    width: 25px;
+    height: 25px;
+    /* margin-right: 20px; */
+    /* margin-right: 20px; */
+ }
+ .githubLog{
+    width: 35px;
+    height: 30px;
+    /* margin-right: 20px; */
+ }
+ .facebookLog{
+    width: 25px;
+    height: 25px;
+    /* margin-right: 5px; */
+ }

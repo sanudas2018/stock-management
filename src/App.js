@@ -18,6 +18,7 @@ import Footer from './Shared/Footer/Footer';
 import './App.css';
 import { createContext, useState } from 'react';
 import SingleProductDetails from './Pages/Inventory/SingleProductDetails/SingleProductDetails';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 export const ProductsContext = createContext();
 
 function App() {
@@ -34,7 +35,11 @@ function App() {
           <Route  path='/about' element={<About></About>}></Route>
           <Route  path='/login' element={<Login></Login>}></Route>
           <Route  path='/registration' element={<Registration></Registration>}></Route>
-          <Route  path='/add-item' element={<Additem></Additem>}></Route>
+          <Route  path='/add-item' element={
+            <RequireAuth>
+              <Additem></Additem>
+            </RequireAuth>
+          }></Route>
           <Route  path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
