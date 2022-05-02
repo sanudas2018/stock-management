@@ -1,0 +1,18 @@
+
+.singleImg{
+   height: 300px;
+   cursor: pointer;
+}
+/* .singleImg{
+   background-image: url();
+} */
+.picture2{
+   display: none;
+
+}
+.thumbnail:hover .picture1{
+   display: none;
+}
+.thumbnail:hover .picture2{
+   display: block;
+}
