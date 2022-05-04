@@ -9,6 +9,9 @@ const SingleProduct = ({product}) => {
    const handleProductDetails = (id) => {
       navigate(`/Single-Product-Details/${id}`)
    }
+   const hendelUpdate = (id) => {
+      navigate(`/inventory-update/${id}`);
+   }
    return (
       <div>
          
@@ -27,7 +30,7 @@ const SingleProduct = ({product}) => {
                   </Card.Text>
                </Card.Body>
                {/* <Button className='checkout-btn-ser'>CheckOut Now</Button> */}
-               <Button className='checkout-btn-ser'>CheckOut Now</Button>
+               <Button className='checkout-btn-ser' onClick={()=> hendelUpdate(_id)}>Update</Button>
             </Card>
          </Col>
          

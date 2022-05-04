@@ -8,7 +8,7 @@ const Links = ({route}) => {
    const {name, link} = route;
    return (
       <div>
-         <NavLink><CustomLink to={link}>{name}</CustomLink></NavLink>
+         <NavLink className='link'><CustomLink to={link}>{name}</CustomLink></NavLink>
       </div>
    );
 };

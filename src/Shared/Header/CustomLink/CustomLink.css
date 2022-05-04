@@ -1,12 +1,13 @@
 .btn-menu{
    text-decoration: none;
-   padding: 10px;
+   padding: 5px;
    color: white;
    font-weight: bold;
+   font-size: 12px;
 }
 .btn-menu:hover{
    background-color: rgb(230, 37, 140);
-   padding: 10px;
+   padding: 5px;
    border-radius: 5px;
    color: white;
 
@@ -14,6 +15,6 @@
 }
 
 .btn-space{
-   margin-right: 10px;
-   padding: 5px;
+   margin-right: 5px;
+   padding: 2px;
 }
