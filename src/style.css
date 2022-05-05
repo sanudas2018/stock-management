@@ -612,6 +612,95 @@ img{
       gap: 1.5rem;
    }
 }
+/* ===============Add New Product===============  */
+.add_product_container{
+   background: var(--color-bg1);
+   padding: 4rem;
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 4rem;
+   height: 30rem;
+   margin: 7rem auto;
+   border-radius: 1rem;
+}
+/* =============Aside===========  */
+.add-product_aside{
+   background: #6b64e3;
+   padding: 3rem;
+   border-radius: 1rem;
+   position: relative;
+   bottom: 10rem;
+}
+.aside_image{
+   width: 12rem;
+   margin-bottom: 2rem;
+}
+.add-product_aside h2{
+   text-align: left;
+   margin-bottom: 1rem;
+}
 
-
+/* ================ Contact Form =========== */
+.contact_form{
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
+   margin-right: 4rem;
+}
+.form_name{
+   /* display: flex; */
+   gap: 1.2rem;
+}
+.contact_form input[type="text"]{
+   width: 100%;
+   margin-bottom: 1rem;
+}
+input{
+   width: 100%;
+   padding: 0.5rem;
+   background: var(--color-bg);
+   color: var(--color-white);
+   border-radius: 0.4rem;
+}
+.contact_form .btn{
+   width: max-content;
+   margin-top: 0.5rem;
+   cursor: pointer;
+}
+/* **************Media Query***********  */
+@media screen and (max-width:1024) {
+   .add_product_container{
+      gap: 1.5rem;
+      margin-top: 3rem;
+      height: auto;
+      padding: 1.5rem;
+   }
+   .add-product_aside{
+      width: auto;
+      padding: 1.5rem;
+      bottom: 0;
+   }
+   .contact_form{
+      align-self: center;
+      margin-right: 1.5rem;
+   }
+}
+@media screen and(max-width: 600px) {
+   .add_product_container{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-top: 0;
+      padding: 0rem;
+   }
+   .contact_form{
+      margin: 0 1.5rem 3rem;
+   }
+   .form_name{
+      flex-direction: column;
+   }
+   .form_name input[type='text']{
+      width: 100%;
+   }
+}
 

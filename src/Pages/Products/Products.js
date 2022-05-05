@@ -5,11 +5,12 @@ import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import { faLayerGroup} from '@fortawesome/free-solid-svg-icons';
 import './Products.css'
 
-const Products = ({product, index}) => {
+const Products = ({product, index, handleProductDelete}) => {
    const {_id, name, image, price, quantity,supplier} = product;
    const remove = <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
    const update = <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
    const add = <FontAwesomeIcon icon={faLayerGroup}></FontAwesomeIcon>
+   // /add-new-product
    return (
       <>
       
@@ -22,7 +23,7 @@ const Products = ({product, index}) => {
             <td>{supplier}</td>
             <td className='actionBtn add1'>{add}</td>
             <td className='actionBtn update1'>{update}</td>
-            <td className='actionBtn delete1'>{remove}</td>
+            <td className='actionBtn delete1' onClick={() => handleProductDelete(_id)}>{remove}</td>
          </tr>
       </>
    );

@@ -21,6 +21,7 @@ import SingleProductDetails from './Pages/Inventory/SingleProductDetails/SingleP
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SingleProductUpdate from './Pages/Inventory/SingleProductUpdate/SingleProductUpdate';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import AddNewProduct from './Pages/AddNewProduct/AddNewProduct';
 
 export const ProductsContext = createContext();
 
@@ -48,6 +49,11 @@ function App() {
           <Route  path='/manage-inventory' element={
             <RequireAuth>
               <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }></Route>
+          <Route  path='/add-new-product' element={
+            <RequireAuth>
+              <AddNewProduct></AddNewProduct>
             </RequireAuth>
           }></Route>
           <Route  path='/add-item' element={
