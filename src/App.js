@@ -20,6 +20,7 @@ import { createContext, useState } from 'react';
 import SingleProductDetails from './Pages/Inventory/SingleProductDetails/SingleProductDetails';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SingleProductUpdate from './Pages/Inventory/SingleProductUpdate/SingleProductUpdate';
+
 export const ProductsContext = createContext();
 
 function App() {

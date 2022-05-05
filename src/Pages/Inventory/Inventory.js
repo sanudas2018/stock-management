@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { ProductsContext } from '../../App';
+import imgpr from '../../Images/my-protfolio/Protfolio.jpg'
 import './Inventory.css'
 import SingleProduct from './SingleProduct/SingleProduct';
+import '../../style.css';
 
 const Inventory = () => {
    // const [products, setProducts] = useState([]);
@@ -14,16 +16,17 @@ const Inventory = () => {
    },[]);
    return (
       <>
-      <Container className='mt-4 service'>
-      <h1 className='text-center text-primary mb-4'>MY SERVICES</h1>
-         <Row xs={1} md={3} lg={4} className="g-4">
+      <section className='product'>
+            <h2>Our Product</h2>
+            <div className='container product__Container'>
             
             {
                products.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
             }
-           
-         </Row>
-      </Container>
+          
+            </div>
+            
+         </section>
          
       </>
    );

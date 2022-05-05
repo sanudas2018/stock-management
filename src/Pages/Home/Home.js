@@ -1,10 +1,18 @@
 import React from 'react';
-import './Home.css'
+
 import Slider from './Slider/Slider';
+import './Home.css';
+import Inventory from '../Inventory/Inventory';
+
 
 const Home = () => {
    return (
-      <Slider></Slider>
+     <>
+       <Slider></Slider>
+       <Inventory></Inventory>
+     </>
+      
+      
    );
 };
 
