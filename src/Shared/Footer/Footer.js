@@ -11,7 +11,7 @@ const Footer = () => {
             <Row>
                
                <Col xs={12} md={12}>
-               copyright &copy; {year} Cosmetic Surgeon. All rights reserved.
+               copyright &copy; {year} Star Tech BD Computer. All rights reserved.
                </Col>
                
             </Row>

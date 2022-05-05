@@ -2,14 +2,19 @@ import React from 'react';
 
 import Slider from './Slider/Slider';
 import './Home.css';
-import Inventory from '../Inventory/Inventory';
+
+import HomeProduct from './HomeProduct/HomeProduct';
+import SuployChain from './SuployChain/SuployChain';
+import Features from './Features/Features';
 
 
 const Home = () => {
    return (
      <>
        <Slider></Slider>
-       <Inventory></Inventory>
+       <HomeProduct></HomeProduct>
+       <SuployChain></SuployChain>
+       <Features></Features>
      </>
       
       

@@ -28,7 +28,7 @@ const SingleProduct = ({product}) => {
                      
                   </div>
                   <div className="update">
-                     <button onClick={()=> hendelUpdate(_id)}>Update</button>
+                     <button className='btn btn-Primary' onClick={()=> hendelUpdate(_id)}>Update</button>
                   </div>
          </article>
          

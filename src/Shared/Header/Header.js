@@ -9,6 +9,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import CustomLink from './CustomLink/CustomLink';
+import '../../style.css';
 
 const Header = () => {
    
@@ -29,7 +30,7 @@ const Header = () => {
    ]
    return (
       <>
-      <Navbar className='bg-opacity-75'  collapseOnSelect expand="lg" sticky='top'  bg="dark" variant="dark">
+      <Navbar className='bg-opacity-75 '  collapseOnSelect expand="lg" sticky='top'  bg="dark" variant="dark">
          <Container>
             <Navbar.Brand className='side-log' as={Link} to="/"><img src={logo} alt=''></img></Navbar.Brand>
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
