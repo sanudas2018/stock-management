@@ -26,6 +26,7 @@ const Header = () => {
       {id: 5, name:'ABOUT', link: '/about'},
       {id: 6, name:'ADD ITEM', link: '/add-item'},
       {id: 7, name:'MANAGE ITEM', link: '/inventory-update'},
+      // {id: 7, name:'Manage Inventory', link: '/manage-inventory'},
      
    ]
    return (

@@ -20,6 +20,7 @@ import { createContext, useState } from 'react';
 import SingleProductDetails from './Pages/Inventory/SingleProductDetails/SingleProductDetails';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SingleProductUpdate from './Pages/Inventory/SingleProductUpdate/SingleProductUpdate';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
 
 export const ProductsContext = createContext();
 
@@ -44,6 +45,11 @@ function App() {
           <Route  path='/about' element={<About></About>}></Route>
           <Route  path='/login' element={<Login></Login>}></Route>
           <Route  path='/registration' element={<Registration></Registration>}></Route>
+          <Route  path='/manage-inventory' element={
+            <RequireAuth>
+              <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }></Route>
           <Route  path='/add-item' element={
             <RequireAuth>
               <Additem></Additem>

@@ -1,7 +1,7 @@
 import React from 'react';
 import supply_img from '../../../Images/supply-chain/supply.JPG';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faDice } from '@fortawesome/free-solid-svg-icons';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ import '../../../style.css';
 import '../../../min'
 
 const SuployChain = () => {
-   const element = <FontAwesomeIcon icon={faCoffee} />
+   
    const icon3 = <FontAwesomeIcon icon={faDice}></FontAwesomeIcon>
    const icon4 = <FontAwesomeIcon icon={faTruck}></FontAwesomeIcon>
    const icon5 = <FontAwesomeIcon icon={faCloud}></FontAwesomeIcon>
