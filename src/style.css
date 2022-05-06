@@ -619,7 +619,7 @@ img{
    display: grid;
    grid-template-columns: 40% 60%;
    gap: 4rem;
-   height: 30rem;
+   height: 38rem;
    margin: 7rem auto;
    border-radius: 1rem;
 }
@@ -655,7 +655,8 @@ img{
    width: 100%;
    margin-bottom: 1rem;
 }
-input{
+input,
+textarea{
    width: 100%;
    padding: 0.5rem;
    background: var(--color-bg);

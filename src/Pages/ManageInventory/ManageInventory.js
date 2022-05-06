@@ -16,7 +16,7 @@ const ManageInventory = () => {
    const handleProductDelete = (id) => {
       const deleteConfirm = window.confirm('Are You Sure You Want TO Delete');
       if(deleteConfirm){
-         console.log('Deleteing user with id', id);
+         console.log('Delete user with id', id);
          const url = `http://localhost:5000/products/${id}`;
          fetch(url, {
             method:'DELETE',
@@ -24,7 +24,7 @@ const ManageInventory = () => {
             .then(res => res.json())
             .then(data => {
                if (data.deleteCount > 0){
-                  const remainingData = allProducts.filter(product => product._id !== id);
+                  const remainingData = allProducts.filter(singleProduct => singleProduct._id !== id);
                   setAllProducts(remainingData);
                }
             });

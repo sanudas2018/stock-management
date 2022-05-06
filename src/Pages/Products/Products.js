@@ -4,12 +4,18 @@ import { faTrashCan} from '@fortawesome/free-solid-svg-icons';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import { faLayerGroup} from '@fortawesome/free-solid-svg-icons';
 import './Products.css'
+import { useNavigate } from 'react-router-dom';
 
 const Products = ({product, index, handleProductDelete}) => {
    const {_id, name, image, price, quantity,supplier} = product;
    const remove = <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
    const update = <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
    const add = <FontAwesomeIcon icon={faLayerGroup}></FontAwesomeIcon>
+   const navigate = useNavigate();
+   const AddNewProduct = () => {
+      const path = `/add-new-product`;
+      navigate(path);
+   }
    // /add-new-product
    return (
       <>
@@ -21,7 +27,7 @@ const Products = ({product, index, handleProductDelete}) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <td>{supplier}</td>
-            <td className='actionBtn add1'>{add}</td>
+            <td className='actionBtn add1' onClick={() => AddNewProduct()}>{add}</td>
             <td className='actionBtn update1'>{update}</td>
             <td className='actionBtn delete1' onClick={() => handleProductDelete(_id)}>{remove}</td>
          </tr>

@@ -1,5 +1,6 @@
 .actionBtn{
    text-align: center;
+   cursor: pointer;
 }
 .add1{
    color: rgb(0, 162, 255);
