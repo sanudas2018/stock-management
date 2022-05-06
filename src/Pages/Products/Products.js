@@ -16,7 +16,12 @@ const Products = ({product, index, handleProductDelete}) => {
       const path = `/add-new-product`;
       navigate(path);
    }
-   // /add-new-product
+   // update-product/
+   const navigateUpdate = useNavigate();
+   const handleProductUpdate = (id) => {
+      const path = `/update-product/${id}`;
+      navigateUpdate(path);
+   }
    return (
       <>
       
@@ -28,7 +33,7 @@ const Products = ({product, index, handleProductDelete}) => {
             <td>{quantity}</td>
             <td>{supplier}</td>
             <td className='actionBtn add1' title='Add Product' onClick={() => AddNewProduct()}>{add}</td>
-            <td className='actionBtn update1'  title='Product Update'>{update}</td>
+            <td className='actionBtn update1'  title='Product Update' onClick={() => handleProductUpdate(_id)}>{update}</td>
             <td className='actionBtn delete1'  title='Delete Product' onClick={() => handleProductDelete(_id)}>{remove}</td>
          </tr>
       </>

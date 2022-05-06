@@ -13,6 +13,7 @@ const SingleProductDetails = () => {
    const singleProduct = products.find(singleProduct => singleProduct._id === id);
    return (
       <>
+      
          <div className="singleDetails mt-3">
             <Card className='w-50 mx-auto border-4 shadow p-3'>
               

@@ -18,6 +18,8 @@ const AddNewProduct = () => {
          .then(res => res.json())
          .then(result =>{
             console.log(result);
+            alert('Successfully add Product');
+            
          })
    };
    return (

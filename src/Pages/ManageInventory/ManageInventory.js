@@ -32,6 +32,11 @@ const ManageInventory = () => {
       }
      
    }
+   // ...... Update Product ...... 
+      const handleProductUpdate = (id) => {
+         console.log('update now ---', id)
+      }
+   // Navigate new product button
    const navigate = useNavigate();
    const AddNewProduct = () => {
       const path = `/add-new-product`;
@@ -40,8 +45,8 @@ const ManageInventory = () => {
    return (
       <>
          <h1 className='totalProduct'>Total Stock Product: {allProducts.length}</h1>
-         <div className="add-product-btn">
-            <h5 className='add-product btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>
+         <div className="add-product-btn-container">
+            <h5 className='add-product-btn btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>
          </div>
          <Table className='table' striped bordered hover variant="dark">
             <thead>
@@ -59,7 +64,7 @@ const ManageInventory = () => {
             <tbody>
 
             {
-               allProducts.map((product, index) => <Products key={product._id} product={product} index={index} handleProductDelete={handleProductDelete}></Products>)
+               allProducts.map((product, index) => <Products key={product._id} product={product} index={index} handleProductDelete={handleProductDelete} handleProductUpdate={handleProductUpdate}></Products>)
             }
                
                

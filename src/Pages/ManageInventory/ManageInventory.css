@@ -13,24 +13,27 @@ thead th{
 .action{
    
 }
-.add-product-btn{
+.add-product-btn-container{
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
+   /* background-color: red; */
+   width: 98%;
 
-   
 }
-.add-product{
+.add-product-btn{
    cursor: pointer;
-   animation: add-product 2s infinite;
+   animation: add-productAnimaton 2s infinite;
    margin-right: 1rem;
+   padding: 0.3rem;
+   font-size: 12px;
 }
-@keyframes add-product {
+@keyframes add-productAnimaton {
    0%{
       transform: scale(1);
    }
    50%{
-      transform: scale(0.9); 
+      transform: scale(1.1); 
    }
    100%{
       transform: scale(1); 
