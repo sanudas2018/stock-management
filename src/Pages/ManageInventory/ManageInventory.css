@@ -4,7 +4,7 @@
 }
 
 .table{
-   margin: 1rem auto;
+   margin: 0.5rem auto;
    margin-bottom: 4rem;
 }
 thead th{
@@ -13,7 +13,26 @@ thead th{
 .action{
    
 }
+.add-product-btn{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+
+   
+}
 .add-product{
    cursor: pointer;
-   margin-left: 1rem;
+   animation: add-product 2s infinite;
+   margin-right: 1rem;
+}
+@keyframes add-product {
+   0%{
+      transform: scale(1);
+   }
+   50%{
+      transform: scale(0.9); 
+   }
+   100%{
+      transform: scale(1); 
+   }
 }

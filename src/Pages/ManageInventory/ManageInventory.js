@@ -40,7 +40,9 @@ const ManageInventory = () => {
    return (
       <>
          <h1 className='totalProduct'>Total Stock Product: {allProducts.length}</h1>
-         <h5 className='add-product btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>
+         <div className="add-product-btn">
+            <h5 className='add-product btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>
+         </div>
          <Table className='table' striped bordered hover variant="dark">
             <thead>
                <tr>
