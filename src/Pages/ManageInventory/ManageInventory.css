@@ -1,9 +1,19 @@
+.totalProduct{
+   margin-top: 1rem;
+   text-align: center;
+}
+
 .table{
-   margin: 2rem auto;
+   margin: 1rem auto;
+   margin-bottom: 4rem;
 }
 thead th{
    text-align: center;
 }
 .action{
    
+}
+.add-product{
+   cursor: pointer;
+   margin-left: 1rem;
 }

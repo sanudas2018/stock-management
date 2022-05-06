@@ -27,9 +27,9 @@ const Products = ({product, index, handleProductDelete}) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <td>{supplier}</td>
-            <td className='actionBtn add1' onClick={() => AddNewProduct()}>{add}</td>
-            <td className='actionBtn update1'>{update}</td>
-            <td className='actionBtn delete1' onClick={() => handleProductDelete(_id)}>{remove}</td>
+            <td className='actionBtn add1' title='Add Product' onClick={() => AddNewProduct()}>{add}</td>
+            <td className='actionBtn update1'  title='Product Update'>{update}</td>
+            <td className='actionBtn delete1'  title='Delete Product' onClick={() => handleProductDelete(_id)}>{remove}</td>
          </tr>
       </>
    );

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { ProductsContext } from '../../App';
 import Products from '../Products/Products';
 import './ManageInventory.css'
@@ -23,7 +24,7 @@ const ManageInventory = () => {
          })
             .then(res => res.json())
             .then(data => {
-               if (data.deleteCount > 0){
+               if (data.deletedCount > 0){
                   const remainingData = allProducts.filter(singleProduct => singleProduct._id !== id);
                   setAllProducts(remainingData);
                }
@@ -31,9 +32,15 @@ const ManageInventory = () => {
       }
      
    }
+   const navigate = useNavigate();
+   const AddNewProduct = () => {
+      const path = `/add-new-product`;
+      navigate(path);
+   }
    return (
       <>
-         <h1 className='totalProduct'>Total Product: {allProducts.length}</h1>
+         <h1 className='totalProduct'>Total Stock Product: {allProducts.length}</h1>
+         <h5 className='add-product btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>
          <Table className='table' striped bordered hover variant="dark">
             <thead>
                <tr>
