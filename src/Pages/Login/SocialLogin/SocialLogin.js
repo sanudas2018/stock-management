@@ -42,18 +42,12 @@ const SocialLogin = () => {
          
          <div className='pt-1 mt-2'>
             {errorElement}
-               <Button className='mt-2 btn btn-block w-100 GitHub-btn' onClick={() => signInWithGithub()} variant="info" type="submit">
-               <img className='githubLog d-inline-block ' src={githubLog} alt=''></img>
-               <p className='d-inline-block mb-0 px-4 '>Continue with GitHub</p>
+               
+               <Button className='google_button' onClick={() => signInWithGoogle()} variant="white" type="submit">
+                  <img className='google_log' src={googleLog} alt=''/>
+                  <p className='google-text'>Continue with Google</p>
                </Button>
-               <Button className=' mt-2 btn btn-block w-100 shadow google-btn d-inline-block' onClick={() => signInWithGoogle()} variant="white" type="submit">
-               <img className='googlelog' src={googleLog} alt=''></img>
-               <p className='d-inline-block mb-0 px-4 '>Continue with Google</p>
-               </Button>
-               <Button className='mt-2 btn btn-block w-100 Facebook-btn d-inline-block ' type="submit">
-               <img className='facebookLog' src={facebookLog} alt=''></img>
-               <p  className='d-inline-block mb-0 px-3 '>Continue with Facebook</p>
-               </Button>
+               
          </div>
          
       </>

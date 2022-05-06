@@ -8,7 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-import './Login.css'
+import './Login.css';
+import '../Registration/Registration.css'
 import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -84,8 +85,10 @@ const Login = () => {
    }
    return (
       <>
-         <h1 className='text-center loginFont'>Login</h1>
+        
          <div className='w-25 border p-4 shadow mx-auto mt-4'>
+         <h3 className='header-text'>Login</h3>
+         <div className="border-text"></div>
          <Form noValidate validated={validated} onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
 
@@ -103,7 +106,7 @@ const Login = () => {
             {/* Forget password  */}
             <p className='curser' onClick={resetPassword}>Forget Password? <span className='text-primary'>Reset Password</span></p>
             {errorElement}
-            <Button className='mx-auto d-block w-100' variant="primary" type="submit">
+            <Button className='mx-auto d-block w-100 login_btn' type="submit">
                Login
             </Button>
             <p className='curser mt-2' onClick={navigateRegistration}>Are you a new patient? <span className='text-primary'>Please Registration</span></p>

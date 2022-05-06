@@ -148,6 +148,7 @@ const SingleProductUpdate = () => {
                         <p className='pro-info'>Price:  {singleProduct.price}</p>
                         <p className='pro-info'>Quantity: {singleProduct.quantity}</p>
                         <p className='pro-info'>Supplier: {singleProduct.supplier}</p>
+                        <p className='pro-info'>Supplier: {singleProduct.description}</p>
                         
                         
                      </div>

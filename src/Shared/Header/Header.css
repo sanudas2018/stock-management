@@ -18,5 +18,13 @@
    flex-direction: row;
    justify-content: flex-end;
    align-items: center;
-   margin-left: 200px;
+   margin-left: 30px;
+}
+
+.link{
+   text-decoration: none;
+   margin-left: 1rem;
+   font-size: 20px;
+   transition: color ease-in-out 300ms;
+   color: ;
 }

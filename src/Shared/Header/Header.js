@@ -1,15 +1,20 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
-import Links from './Links/Links';
+import { Link} from 'react-router-dom';
+import { NavLink } from 'react-bootstrap';
 
+import CustomLink from './CustomLink/CustomLink'
 import logo from './../../Images/log-account/logo.png';
 import './Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
-import CustomLink from './CustomLink/CustomLink';
+
 import '../../style.css';
+
+import '../../min';
+import './Header.css'
+
 
 const Header = () => {
    
@@ -18,19 +23,23 @@ const Header = () => {
    const hendleSingOut = () =>{
       signOut(auth);
    }
+
    console.log(user)
-   const routes = [
-      {id: 1, name:'HOME', link: '/'},
-      {id: 2, name:'INVENTORY', link: '/inventory'},
-      {id: 4, name:'BLOGS', link: '/blogs'},
-      {id: 5, name:'ABOUT', link: '/about'},
-      {id: 6, name:'ADD ITEM', link: '/add-item'},
-      {id: 7, name:'MANAGE ITEM', link: '/inventory-update'},
-      // {id: 7, name:'Manage Inventory', link: '/manage-inventory'},
-     
-   ]
+   // const routes = [
+   //    {id: 1, name:'HOME', link: '/'},
+   //    {id: 2, name:'INVENTORY', link: '/inventory'},
+   //    {id: 4, name:'BLOGS', link: '/blogs'},
+   //    {id: 5, name:'ABOUT', link: '/about'},
+   //    {id: 6, name:'ADD ITEM', link: '/add-item'},
+   //    {id: 7, name:'MANAGE ITEM', link: '/inventory-update'},
+   //    // {id: 7, name:'Manage Inventory', link: '/manage-inventory'},
+   
+   // ]
+   // const bar = <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+   // const close = <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
    return (
       <>
+      
       <Navbar className='bg-opacity-75 '  collapseOnSelect expand="lg" sticky='top'  bg="dark" variant="dark">
          <Container>
             <Navbar.Brand className='side-log' as={Link} to="/"><img src={logo} alt=''></img></Navbar.Brand>
@@ -40,13 +49,40 @@ const Header = () => {
                   {/* {
                      user && <Link to='/joy'>joy</Link>
                   } */}
-                     {
+                     {/* {
                         routes.map(route => <Links key={route.id} route={route}></Links>)
+                     } */}
+                     <NavLink className='link'>
+                        <CustomLink to='/'>Home</CustomLink>
+                     </NavLink>
+                     <NavLink className='link'>
+                        <CustomLink to='/inventory'>Product</CustomLink>
+                     </NavLink>
+                     
+                     {
+                        user &&  <NavLink className='link'>
+                        <CustomLink to='/add-item'>Add Item</CustomLink>
+                     </NavLink>
                      }
+                    
+                     {
+                        user && <NavLink className='link'>
+                        <CustomLink to='/manage-inventory'>Manage Item</CustomLink>
+                     </NavLink>
+                     }
+                    {
+                       user &&  <NavLink className='link'>
+                       <CustomLink to='/my-item'>My Item</CustomLink>
+                    </NavLink>
+                    }
+                     <NavLink className='link'>
+                        <CustomLink to='/blogs'>Blogs</CustomLink>
+                     </NavLink>
+                     
                      
                   </Nav>
             <Nav>
-            {/* <Nav.Link href="#deets">More deets</Nav.Link> */}
+           
             <div className="right-side">
             {
                user ?

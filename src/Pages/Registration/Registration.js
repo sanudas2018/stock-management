@@ -65,8 +65,9 @@ const Registration = () => {
    }
    return (
       <>
-      <h1 className='text-center loginFont'>Registration</h1>
       <div className='w-25 border p-4 shadow mx-auto mt-4'>
+      <h3 className='header-text'>Registration</h3>
+      <div className="border-text"></div>
       <Form onSubmit={handleRegister}>
          <Form.Group className="mb-3" controlId="formBasicEmail">
 
@@ -91,7 +92,7 @@ const Registration = () => {
          </Form.Group>
 
          {errorElement}
-         <Button disabled={!agree} className='mx-auto d-block w-100'  variant="primary" type="submit" >
+         <Button disabled={!agree} className='mx-auto d-block w-100 login_btn'  variant="primary" type="submit" >
             Registration
          </Button>
          <p className='curser' onClick={navigateLogin}>Already have an account? <span className='text-primary'>Please Login</span></p>
