@@ -40,10 +40,10 @@ const Header = () => {
    return (
       <>
       
-      <Navbar className='bg-opacity-75 '  collapseOnSelect expand="lg" sticky='top'  bg="dark" variant="dark">
+      <Navbar className='bg-opacity-75 nav'  collapseOnSelect expand="lg" sticky='top'>
          <Container>
             <Navbar.Brand className='side-log' as={Link} to="/"><img src={logo} alt=''></img></Navbar.Brand>
-               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+               <Navbar.Toggle aria-controls="responsive-navbar-nav " className='colaps' />
                <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="">
                   {/* {
@@ -61,7 +61,7 @@ const Header = () => {
                      
                      {
                         user &&  <NavLink className='link'>
-                        <CustomLink to='/add-item'>Add Item</CustomLink>
+                        <CustomLink to='/add-new-product'>Add Item</CustomLink>
                      </NavLink>
                      }
                     
@@ -83,20 +83,20 @@ const Header = () => {
                   </Nav>
             <Nav>
            
-            <div className="right-side">
+            <div className="right-side text-color">
             {
                user ?
-               <Nav.Link  onClick={hendleSingOut} as={Link} to="login">Sign Out</Nav.Link> 
+               <Nav.Link className='text-color'  onClick={hendleSingOut} as={Link} to="login">Sign Out</Nav.Link> 
                :
-               <Nav.Link as={Link} to="login">Login</Nav.Link>
+               <Nav.Link className='text-color login-res reg' as={Link} to="login">Login</Nav.Link>
             }  
                {/* <Nav.Link as={Link} to="login">Login</Nav.Link>   */}
            
               {
                  user ? 
-                 <Nav.Link as={Link} to="registration"></Nav.Link>
+                 <Nav.Link className='text-color' as={Link} to="registration"></Nav.Link>
                  :
-                 <Nav.Link as={Link} to="registration">Registration</Nav.Link>
+                 <Nav.Link className='text-color reg' as={Link} to="registration">Registration</Nav.Link>
               }
             
             {

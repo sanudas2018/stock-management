@@ -24,6 +24,7 @@ import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import AddNewProduct from './Pages/AddNewProduct/AddNewProduct';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
 import MyItem from './Pages/MyItem/MyItem';
+import { ToastContainer } from 'react-bootstrap';
 
 export const ProductsContext = createContext();
 
@@ -81,6 +82,7 @@ function App() {
           <Route  path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
+        <ToastContainer></ToastContainer>
       </ProductsContext.Provider>
   
       

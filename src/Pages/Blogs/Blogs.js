@@ -1,11 +1,15 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import jwt from '../../Images/my-protfolio/jwt.JPG'
-import './Blogs.css'
+import './Blogs.css';
+import '../../style.css'
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Blogs = () => {
    return (
-      <div className='blog-content'>
+      <>
+      <PageTitle title='Blogs'></PageTitle>
+      <div className='blog-content '>
          <div className='question-section'>
             <div className='container'>
                <div className='card mt-3' >
@@ -13,10 +17,25 @@ const Blogs = () => {
                      <span className='d-flex flex-row justify-content-center fs-4 fw-bold '>Important Question and Answer</span>
                   </div>
                   <div className='card-body'>
-                     <button type='button' className='button-style btn btn-primary position-relative'>
+                  <div className='card-body'>
+                     <button type='button' className='button-style btn btn-primary  position-relative'>
                            Question
                             <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
                               01
+                            </span>
+                     </button>
+                     <h5 className='card-title mt-3'>What is the purpose of Jwt and how does it work?</h5>
+                     <p className='card-text'><span className='fw-bold'>Answer: <br></br></span>
+                     <span className='node-js'>JSON Web Token</span> which is used as a token to secure the API or an open value that is used to share security information between two parties.Encodes JSON objects in each JWT, in which the claim is set. This again JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.<br></br>
+                     <img className='auth-img mt-2' src={jwt} alt=''></img>
+                    
+                     </p>
+                  </div>
+                  <hr></hr>
+                     <button type='button' className='button-style btn btn-primary position-relative'>
+                           Question
+                            <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
+                              02
                             </span>
                      </button>
                      <h5 className='card-title mt-3'>Difference between Javascript and nodejs?</h5>
@@ -85,13 +104,13 @@ const Blogs = () => {
                      <button type='button' className='button-style btn btn-primary  position-relative'>
                            Question
                             <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
-                              02
+                              03
                             </span>
                      </button>
                      <h5 className='card-title mt-3'>When should you use node.js and when should you use MongoDB?</h5>
                      <p className='card-text'><span className='fw-bold'>Answer: <br></br></span><strong>NodeJs: </strong>
                      First, NodeJs are primarily for fast communication and non-blocking, event-driven servers, due to its single-threaded nature. As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. Many connections can be handled concurrently.
-                     <span className='node-js'>But loading data from a very large database and generating a report from it would not be so good.</span><br></br>
+                     <span className='node-js'> But loading data from a very large database and generating a report from it would not be so good.</span><br></br>
                      <strong>MongoDB: </strong>MongoDB is an open-source database developed by MongoDB, Inc. MongoDB stores data in JSON-like documents that can vary in structure.full managed database service automated deployments and config. Here we can keep the collection in a very felix way. Here the data will be in the form of Gula BJSON.This is why we use mongoDB.<br></br>
                     
                      </p>
@@ -101,7 +120,7 @@ const Blogs = () => {
                      <button type='button' className='button-style btn btn-primary position-relative'>
                            Question
                             <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
-                              03
+                              04
                             </span>
                      </button>
                      <h5 className='card-title mt-3'>Differences between SQL and NoSQL database?</h5>
@@ -155,22 +174,9 @@ const Blogs = () => {
 
                      </p>
                   </div>
-                  <hr></hr>
+                  
 
-                  <div className='card-body'>
-                     <button type='button' className='button-style btn btn-primary  position-relative'>
-                           Question
-                            <span className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
-                              04
-                            </span>
-                     </button>
-                     <h5 className='card-title mt-3'>What is the purpose of Jwt and how does it work?</h5>
-                     <p className='card-text'><span className='fw-bold'>Answer: <br></br></span>
-                     <span className='node-js'>JSON Web Token</span> which is used as a token to secure the API or an open value that is used to share security information between two parties.Encodes JSON objects in each JWT, in which the claim is set. This again JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.<br></br>
-                     <img className='auth-img mt-2' src={jwt} alt=''></img>
-                    
-                     </p>
-                  </div>
+                  
                </div>
                {/* ........  */}
                
@@ -179,6 +185,8 @@ const Blogs = () => {
 
          </div>
       </div>
+      </>
+      
    );
 };
 

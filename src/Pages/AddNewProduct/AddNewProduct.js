@@ -1,10 +1,16 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 import newProduct from '../../Images/my-protfolio/login.JPG';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import '../../style.css';
 
 const AddNewProduct = () => {
    const { register, handleSubmit } = useForm();
+   const [user] = useAuthState(auth);
+   console.log(user)
    const onSubmit = data => {
       console.log(data)
       const url = `http://localhost:5000/products`;
@@ -19,11 +25,16 @@ const AddNewProduct = () => {
          .then(result =>{
             console.log(result);
             alert('Successfully add Product');
+            // const {} = result;
+            // if(data.insertedId){
+            //    alert('Successfully add Product');
+            // }
             
          })
    };
    return (
       <>
+      <PageTitle title='Add Product'></PageTitle>
       <section className='add-product'>
          <div className="container add_product_container">
             <aside className='add-product_aside'>
@@ -35,6 +46,8 @@ const AddNewProduct = () => {
             {/* ...........  */}
             <form className='contact_form' onSubmit={handleSubmit(onSubmit)}>
                <div className="form_name">
+                  <input value={user?.displayName} type='text' {...register("username")} required readOnly />
+                  <input value={user?.email} type='text' {...register("email")} required readOnly/>
                   <input placeholder='Input Your Product Name' type='text' {...register("name", { required: true, maxLength: 20 })} />
                   <input placeholder='Price' type="text" {...register("price")} />
                   <input placeholder='Quantity' type="text" {...register("quantity")} />

@@ -26,5 +26,79 @@
    margin-left: 1rem;
    font-size: 20px;
    transition: color ease-in-out 300ms;
-   color: ;
+
 }
+.navbar>.container{
+   width: 100%;
+}
+.nav{
+   background: transparent;
+}
+.text-color{
+   color: white !important;
+}
+.colaps .Toggle{
+   color: white;
+}
+.navbar-toggler-icon{
+   color: white;
+   background-color: white;
+}
+.profilePhoto{
+   margin-left: 6px;
+}
+.navbar-brand{
+   margin-right: 8px;
+}
+.navbar-brand img{
+   margin-right: 15px;
+}
+.navbar-brand img{
+   width: 150px;
+}
+
+.navbar-collapse{
+   margin-left: 100px;
+}
+.responsive-navbar-nav{
+   display: flex !important;
+   flex-direction: row !important;
+   align-items: center !important;
+   justify-content: space-between !important;
+}
+/* @media only screen and (min-width:991px)and (max-width: 1400px) {
+   
+   .right-side{
+      margin-left: 20px;
+   }
+} */
+.right-side{
+   margin-left: 100px;
+}
+@media only screen and (min-width:991px)and (max-width: 1460px) {
+   .navbar-collapse{
+      margin-left: 90px;
+   }
+   
+   
+}
+@media only screen and (min-width:991px)and (max-width: 1200px) {
+   .navbar-collapse{
+      margin-left: 40px;
+   }
+   .right-side {
+      margin-left: 0px;
+  }
+  
+}
+
+@media only screen and (min-width:576px)and (max-width: 991px) {
+  .profilePhoto{
+     margin-left: 4px;
+  }
+  .reg{
+     margin-left: 5px;
+     margin-right: 4px;
+  }
+}
+

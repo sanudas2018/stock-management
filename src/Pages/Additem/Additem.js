@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Additem.css'
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Additem = () => {
+   const [myItem, setMyItem] = useState([]);
+   useEffect(()=>{
+      const getItem = async() => {
+         const url = `http://localhost:5000/products`;
+         const {data} = await axios.get(url);
+         setMyItem(data);
+      }
+      getItem();
+   },[])
    return (
-      <div>
-         <h1>add item</h1>
-      </div>
+      <>
+      <PageTitle title='Add Item'></PageTitle>
+         <h1>add item {myItem.length}</h1>
+      </>
    );
 };
 

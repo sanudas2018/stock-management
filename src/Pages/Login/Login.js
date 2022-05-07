@@ -11,6 +11,7 @@ import Loading from '../../Shared/Loading/Loading';
 import './Login.css';
 import '../Registration/Registration.css'
 import SocialLogin from './SocialLogin/SocialLogin';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Login = () => {
    const [validated, setValidated] = useState(false)
@@ -85,7 +86,7 @@ const Login = () => {
    }
    return (
       <>
-        
+        <PageTitle title='Login'></PageTitle>
          <div className='w-25 border p-4 shadow mx-auto mt-4'>
          <h3 className='header-text'>Login</h3>
          <div className="border-text"></div>

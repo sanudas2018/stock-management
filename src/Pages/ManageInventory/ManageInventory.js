@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { ProductsContext } from '../../App';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Products from '../Products/Products';
 import './ManageInventory.css'
 
@@ -44,6 +45,7 @@ const ManageInventory = () => {
    }
    return (
       <>
+      <PageTitle title='Inventory'></PageTitle>
          <h1 className='totalProduct'>Total Stock Product: {allProducts.length}</h1>
          <div className="add-product-btn-container">
             <h5 className='add-product-btn btn btn-Primary' onClick={() => AddNewProduct()} >ADD NEW PRODUCT</h5>

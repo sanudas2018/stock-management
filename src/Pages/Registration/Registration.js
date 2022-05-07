@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import './Registration.css'
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Registration = () => {
    //1st checkBox control 
@@ -65,6 +66,7 @@ const Registration = () => {
    }
    return (
       <>
+      <PageTitle title='Registration'></PageTitle>
       <div className='w-25 border p-4 shadow mx-auto mt-4'>
       <h3 className='header-text'>Registration</h3>
       <div className="border-text"></div>

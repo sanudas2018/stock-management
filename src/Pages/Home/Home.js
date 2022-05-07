@@ -6,11 +6,13 @@ import './Home.css';
 import HomeProduct from './HomeProduct/HomeProduct';
 import SuployChain from './SuployChain/SuployChain';
 import Features from './Features/Features';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 
 const Home = () => {
    return (
      <>
+     <PageTitle title='StarTechBD-Computer'></PageTitle>
        <Slider></Slider>
        <HomeProduct></HomeProduct>
        <SuployChain></SuployChain>

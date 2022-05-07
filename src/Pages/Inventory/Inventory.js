@@ -5,6 +5,7 @@ import imgpr from '../../Images/my-protfolio/Protfolio.jpg'
 import './Inventory.css'
 import SingleProduct from './SingleProduct/SingleProduct';
 import '../../style.css';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Inventory = () => {
    // const [products, setProducts] = useState([]);
@@ -16,6 +17,7 @@ const Inventory = () => {
    },[]);
    return (
       <>
+      <PageTitle title='All Product'></PageTitle>
       <section className='product'>
             <h2>Our Product</h2>
             <div className='container product__Container'>
