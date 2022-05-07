@@ -13,7 +13,7 @@ const AddNewProduct = () => {
    console.log(user)
    const onSubmit = data => {
       console.log(data)
-      const url = `http://localhost:5000/products`;
+      const url = `https://morning-journey-72392.herokuapp.com/products`;
       fetch(url, {
          method:'POST',
          headers: {

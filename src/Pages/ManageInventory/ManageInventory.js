@@ -9,7 +9,7 @@ import './ManageInventory.css'
 const ManageInventory = () => {
    const [allProducts, setAllProducts] = useContext(ProductsContext);
    useEffect(() =>{
-      fetch('http://localhost:5000/products')
+      fetch('https://morning-journey-72392.herokuapp.com/products')
          .then(res => res.json())
          .then(data => setAllProducts(data))
    },[]);
@@ -19,7 +19,7 @@ const ManageInventory = () => {
       const deleteConfirm = window.confirm('Are You Sure You Want TO Delete');
       if(deleteConfirm){
          console.log('Delete user with id', id);
-         const url = `http://localhost:5000/products/${id}`;
+         const url = `https://morning-journey-72392.herokuapp.com/products/${id}`;
          fetch(url, {
             method:'DELETE',
          })

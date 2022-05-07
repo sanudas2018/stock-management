@@ -11,7 +11,7 @@ const Inventory = () => {
    // const [products, setProducts] = useState([]);
    const [products, setProducts] = useContext(ProductsContext);
    useEffect(() =>{
-      fetch('http://localhost:5000/products')
+      fetch('https://morning-journey-72392.herokuapp.com/products')
          .then(res => res.json())
          .then(data => setProducts(data))
    },[]);

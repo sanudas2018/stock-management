@@ -13,7 +13,7 @@ const MyItem = () => {
       const getItem = async() => {
          // console.log(user.email)
          const email = user.email;
-         const url = `http://localhost:5000/products?email=${email}`;
+         const url = `https://morning-journey-72392.herokuapp.com/products?email=${email}`;
          const {data} = await axios.get(url);
          setMyItem(data);
          // console.log(data)

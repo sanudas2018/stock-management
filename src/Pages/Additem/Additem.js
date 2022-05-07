@@ -7,7 +7,7 @@ const Additem = () => {
    const [myItem, setMyItem] = useState([]);
    useEffect(()=>{
       const getItem = async() => {
-         const url = `http://localhost:5000/products`;
+         const url = `https://morning-journey-72392.herokuapp.com/products`;
          const {data} = await axios.get(url);
          setMyItem(data);
       }

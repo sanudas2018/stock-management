@@ -29,7 +29,7 @@ const SingleProductUpdate = () => {
    const [singleProduct, setSingleProduct] = useState({});
    
    useEffect(() => {
-      const url = `http://localhost:5000/inventory-update/${id}`;
+      const url = `https://morning-journey-72392.herokuapp.com/inventory-update/${id}`;
       fetch(url)
          .then(res => res.json())
          .then(data => setSingleProduct(data))
@@ -39,7 +39,7 @@ const SingleProductUpdate = () => {
    //    const qty = event.target.qty.value;
    //    const updateQty = {qty};
    //    // data send to server
-   //    const url = `http://localhost:5000/inventory-update/${id}`;
+   //    const url = `https://morning-journey-72392.herokuapp.com/inventory-update/${id}`;
    //    fetch(url, {
    //       method:'PUT',
    //       headers: {
@@ -57,7 +57,7 @@ const SingleProductUpdate = () => {
 
    // const [qty, setQty] = useState([]);
    // useEffect(() => {
-   //    const url = `http://localhost:5000/inventory-update/${id}`;
+   //    const url = `https://morning-journey-72392.herokuapp.com/inventory-update/${id}`;
    //    fetch(url)
    //       .then(res => res.json())
    //       .then(data => setQty(data))
@@ -67,7 +67,7 @@ const SingleProductUpdate = () => {
    //    const qty = event.target.qty.value;
    //    const updateQty = {qty};
    //    // data send to server
-   //    const url = `http://localhost:5000/inventory-update/${id}`;
+   //    const url = `https://morning-journey-72392.herokuapp.com/inventory-update/${id}`;
    //    fetch(url, {
    //       method:'PUT',
    //       headers: {
