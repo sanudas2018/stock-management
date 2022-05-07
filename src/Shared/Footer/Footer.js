@@ -2,16 +2,19 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMaskFace} from '@fortawesome/free-solid-svg-icons';
-import { faTicket} from '@fortawesome/free-solid-svg-icons';
+// import { f} from '@fortawesome/free-solid-svg-icons';
+// import { faFaceKissBeam} from '@fortawesome/free-solid-svg-icons';
+import facebook from '../../Images/log-account/facebook-logo.png';
+import twitter from '../../Images/log-account/twitter-logo-vector-png-clipart-1.png';
+import whatup from '../../Images/log-account/WhatsApp-logo.png';
 import './Footer.css';
 import '../../style.css';
 
 const Footer = () => {
    const today = new Date();
    const year = today.getFullYear();
-   const facebook = <FontAwesomeIcon icon={faMaskFace}></FontAwesomeIcon>
-   const twitter = <FontAwesomeIcon icon={faTicket}></FontAwesomeIcon>
+   // const facebook = <FontAwesomeIcon icon={faRemove}></FontAwesomeIcon>
+   // const twitter = <FontAwesomeIcon icon={faFaceKissBeam}></FontAwesomeIcon>
    
    return (
       <>
@@ -25,12 +28,12 @@ const Footer = () => {
          <div className='footer_2'>
             <h4>PermaLinks</h4>
             <ul>
-               <li><Link to='#' className='footer_logo'>Home</Link></li>
-               <li><Link to='#' className='footer_logo'>Product</Link></li>
-               <li><Link to='#' className='footer_logo'>Items</Link></li>
+               <li><Link to='/' className='footer_logo'>Home</Link></li>
+               <li><Link to='/inventory' className='footer_logo'>Product</Link></li>
+               <li><Link to='/add-new-product' className='footer_logo'>Items</Link></li>
                
-               <li><Link to='#' className='footer_logo'>About</Link></li>
-               <li><Link to='#' className='footer_logo'>Blog</Link></li>
+               <li><Link to='/my-item' className='footer_logo'>About</Link></li>
+               <li><Link to='/blogs' className='footer_logo'>Blog</Link></li>
             </ul>
          </div>
          <div className='footer_3'>
@@ -48,14 +51,11 @@ const Footer = () => {
                <p>+8801642391871</p>
                <p>programing26@gmail.com</p>
             </div>
-            <ul className='footer_socials'>
-
-               <li><Link to='#' className='footer_logo'>{facebook}</Link></li>
-               <li><Link to='#' className='footer_logo'>{twitter}</Link></li>
-               <li><Link to='#' className='footer_logo'></Link></li>
-               <li><Link to='#' className='footer_logo'></Link></li>
-               
-            </ul>
+            <div className='footer_socials'>
+               <img src={facebook}></img>
+               <img src={twitter}></img>
+               <img src={whatup}></img>
+            </div>
          </div>
          
          </div>
