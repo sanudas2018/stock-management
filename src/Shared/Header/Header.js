@@ -9,15 +9,17 @@ import './Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import { faUser} from '@fortawesome/free-solid-svg-icons';
 
 import '../../style.css';
 
 import '../../min';
 import './Header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Header = () => {
-   
+   const userimg = <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
 
    const [user] = useAuthState(auth);
    const hendleSingOut = () =>{
@@ -100,9 +102,13 @@ const Header = () => {
               }
             
             {
-              user && <img className='profilePhoto' src={user?.photoURL}></img>
-               
+              user &&
+               <img className='profilePhoto' src={user?.photoURL}></img>
+        
             }
+            {/* {
+                user ?  '' : <img className='profilePhoto' src={userimg}></img>
+            } */}
             </div>
             </Nav>
             </Navbar.Collapse>
