@@ -42,7 +42,7 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     // handle submit with login
-    const handleLogin = async (event) => {
+    const handleLogin = (event) => {
        const form = event.currentTarget;
        if(form.checkValidity() === false){
           event.preventDefault();
@@ -55,10 +55,10 @@ const Login = () => {
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
       // 3rd
-      await signInWithEmailAndPassword(email, password); 
-      const {data} = await axios.post('https://morning-journey-72392.herokuapp.com/login', {email});
+      signInWithEmailAndPassword(email, password); 
+      // const {data} = await axios.post('https://morning-journey-72392.herokuapp.com/login', {email});
       // console.log(data)
-      localStorage.setItem('accessToken', data.accessToken);
+      // localStorage.setItem('accessToken', data.accessToken);
     }
     // conditional item
     if(user){
