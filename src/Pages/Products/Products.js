@@ -27,7 +27,7 @@ const Products = ({product, index, handleProductDelete}) => {
       
          <tr>
             <td>{index + 1}</td>
-            {/* <td><img src={{image}} alt=''></img></td> */}
+            <td className='image-control'><img src={image} alt=''></img></td>
             <td>{name}</td>
             <td>{price}</td>
             <td>{quantity}</td>

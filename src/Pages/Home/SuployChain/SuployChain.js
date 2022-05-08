@@ -21,7 +21,7 @@ const SuployChain = () => {
    const icon6 = <FontAwesomeIcon icon={faGears}></FontAwesomeIcon>
    return (
       <>
-       <section className='supply-chain'>
+       <section id='supply1' className='supply-chain'>
           <div className="container supply_container">
              <div className="supply-left">
                 <h1>Supply Chaining</h1>

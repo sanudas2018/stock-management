@@ -131,6 +131,14 @@ const SingleProductUpdate = () => {
 
      
    // }
+   const [qtyDelivered, setQtyDelivered] = useState([]);
+   const hendleSubmit = event => {
+      event.preventDefault();
+      
+      const qty = parseInt(singleProduct.quantity);
+      console.log(qty)
+      setQtyDelivered(qty - 1);
+   }
    return (
       <>
        <section className='product-qty'>
@@ -146,17 +154,17 @@ const SingleProductUpdate = () => {
 
                         <h5 className='pro-qty-name'>{singleProduct.name}</h5>
                         <p className='pro-info'>Price:  {singleProduct.price}</p>
-                        <p className='pro-info'>Quantity: {singleProduct.quantity}</p>
+                        <p className='pro-info'>Quantity: {singleProduct.quantity}{qtyDelivered}</p>
                         <p className='pro-info'>Supplier: {singleProduct.supplier}</p>
                         <p className='pro-info'>Supplier: {singleProduct.description}</p>
                         
                         
                      </div>
                      <div className="update-qty">
-                        <form>
+                        <form onSubmit={hendleSubmit}>
                            <input type="number" placeholder='Input Quantity' />
-                           <button className='btn btn-danger'>Delivered</button>
-                           <button className='btn btn-Primary'>Quantity Update</button>
+                           <button type='submit' className='btn btn-danger' onClick={()=> setQtyDelivered()}>Delivered</button>
+                           <button type='submit' className='btn btn-Primary'>Quantity Update</button>
                         </form>
                         
                      </div>

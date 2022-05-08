@@ -54,7 +54,7 @@ const ManageInventory = () => {
             <thead>
                <tr>
                   <th>No</th>
-                  {/* <th>Image</th> */}
+                  <th>Image</th>
                   <th>Product Name</th>
                   <th>Price</th>
                   <th>Quantity</th>

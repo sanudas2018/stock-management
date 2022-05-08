@@ -7,6 +7,7 @@ import HomeProduct from './HomeProduct/HomeProduct';
 import SuployChain from './SuployChain/SuployChain';
 import Features from './Features/Features';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
+import Nav from '../Nav/Nav';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
      <>
      <PageTitle title='StarTechBD-Computer'></PageTitle>
        <Slider></Slider>
+       <Nav></Nav>
        <HomeProduct></HomeProduct>
        <SuployChain></SuployChain>
        <Features></Features>

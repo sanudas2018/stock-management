@@ -17,7 +17,7 @@ const Features = () => {
       
       <>
 
-      <section className="features">
+      <section id='featu1' className="features">
          <div className="container features-container">
             <div className="features-header">
                <h1>Features Of Inventory Management </h1>

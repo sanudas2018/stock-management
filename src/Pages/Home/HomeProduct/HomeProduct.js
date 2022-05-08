@@ -15,7 +15,7 @@ const HomeProduct = () => {
    return (
       
       <>
-      <section className='product'>
+      <section id='product1' className='product'>
             <h2>Our Product</h2>
             <div className='container product__Container'>
             
