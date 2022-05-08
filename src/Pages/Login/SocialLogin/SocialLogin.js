@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
@@ -11,23 +11,23 @@ import './SocialLogin.css'
 
 const SocialLogin = () => {
    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-   const [signInWithGithub, gituser, gitLoading, gitError] = useSignInWithGithub(auth);
+  
    const navigate = useNavigate();
     // state/location ta mone rakhar janno
     const location = useLocation();
     const from = location?.state?.from?.pathname || "/";
-   if(loading || gitLoading){
+   if(loading){
       return <Loading></Loading>
    }
    let errorElement;
-   if (error || gitError) {
+   if (error) {
       errorElement =(<div>
-         <p className='text-danger'>Error: {error?.message} {gitError?.message}</p>
+         <p className='text-danger'>Error: {error?.message}</p>
        </div>
        )
     }
    //  ..... 
-   if (user || gituser) {
+   if (user) {
          navigate(from, { replace: true });
     }
 

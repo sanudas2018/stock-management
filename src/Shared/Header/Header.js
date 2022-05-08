@@ -24,7 +24,7 @@ const Header = () => {
       signOut(auth);
    }
 
-   console.log(user)
+
    // const routes = [
    //    {id: 1, name:'HOME', link: '/'},
    //    {id: 2, name:'INVENTORY', link: '/inventory'},

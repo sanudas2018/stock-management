@@ -46,7 +46,7 @@ const Registration = () => {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName });
       // alert('Updated profile');
-      navigate('/')
+      navigate('/login')
 
    };
    // if(user){

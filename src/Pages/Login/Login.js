@@ -12,6 +12,7 @@ import './Login.css';
 import '../Registration/Registration.css'
 import SocialLogin from './SocialLogin/SocialLogin';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
+import axios from 'axios';
 
 const Login = () => {
    const [validated, setValidated] = useState(false)
@@ -36,12 +37,12 @@ const Login = () => {
       error,
     ] = useSignInWithEmailAndPassword(auth);
    //  ............
-    console.log(user)
+
     //From data received
     const emailRef = useRef('');
     const passwordRef = useRef('');
     // handle submit with login
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
        const form = event.currentTarget;
        if(form.checkValidity() === false){
           event.preventDefault();
@@ -54,12 +55,15 @@ const Login = () => {
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
       // 3rd
-      signInWithEmailAndPassword(email, password); 
-
+      await signInWithEmailAndPassword(email, password); 
+      const {data} = await axios.post('http://localhost:5000/login', {email});
+      // console.log(data)
+      localStorage.setItem('accessToken', data.accessToken);
+      navigate(from, { replace: true });
     }
     // conditional item
     if(user){
-      navigate(from, { replace: true });
+      // navigate(from, { replace: true });
     }
     // error hendle
     let errorElement;
