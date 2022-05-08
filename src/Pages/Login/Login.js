@@ -42,7 +42,8 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     // handle submit with login
-    const handleLogin = async (event) => {
+   //  async event)
+    const handleLogin = (event) => {
        const form = event.currentTarget;
        if(form.checkValidity() === false){
           event.preventDefault();
@@ -54,16 +55,17 @@ const Login = () => {
       // 1st
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
+      signInWithEmailAndPassword(email, password);
       // 3rd
-      await signInWithEmailAndPassword(email, password); 
-      const {data} = await axios.post('https://morning-journey-72392.herokuapp.com/login', {email});
+      // await signInWithEmailAndPassword(email, password); 
+      // const {data} = await axios.post('https://morning-journey-72392.herokuapp.com/login', {email});
       // console.log(data)
-      localStorage.setItem('accessToken', data.accessToken);
-      navigate(from, { replace: true });
+      // localStorage.setItem('accessToken', data.accessToken);
+      // navigate(from, { replace: true });
     }
     // conditional item
     if(user){
-      // navigate(from, { replace: true });
+      navigate(from, { replace: true });
     }
     // error hendle
     let errorElement;
