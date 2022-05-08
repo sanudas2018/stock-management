@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import newProduct from '../../Images/my-protfolio/login.JPG';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
@@ -23,8 +23,13 @@ const AddNewProduct = () => {
       })
          .then(res => res.json())
          .then(result =>{
-            console.log(result);
-            alert('Successfully add Product');
+            // console.log(result);
+  
+            // console.log(result.insertedId);
+            if(result.insertedId){
+
+               toast('Successfully add Product');
+            }
             // const {} = result;
             // if(data.insertedId){
             //    alert('Successfully add Product');
@@ -62,6 +67,7 @@ const AddNewProduct = () => {
                {/* <button type='submit' className='btn btn-Primary'>Add New Product</button> */}
             </form>
          </div>
+         <ToastContainer />
       </section>
       
       </>

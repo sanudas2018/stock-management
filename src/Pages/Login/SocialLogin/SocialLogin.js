@@ -5,8 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 import googleLog from '../../../Images/log-account/google-logo-icon.png'
-import githubLog from '../../../Images/log-account/github-cat-inpng.png'
-import facebookLog from '../../../Images/log-account/facebook-logo.png'
+
 
 import './SocialLogin.css'
 
