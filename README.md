@@ -32,4 +32,6 @@ This Project code link(github) [Startechbd-computer](https://github.com/Programm
    - mongodb data base
    - react helmet
    - JWT use
+   - my .env file add to ignore
 
+## My Project
