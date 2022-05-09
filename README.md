@@ -3,7 +3,6 @@
 ---
 This Project Live Link [Startechbd-computer](https://startechbd-computer.web.app/).
 ---
-This Project code link(github) [Startechbd-computer](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-sanudas2018).
 ---
 ### My Project Description:
    - This website is Electronic Inventory related (Product management).
